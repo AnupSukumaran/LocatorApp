@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "sascustomalert",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AnupSukumaran/SASCustomAlert.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "8c5b4c629eee5df31210949320ea5c38b0e9cb4c"
+      }
+    }
+  ],
+  "version" : 2
+}

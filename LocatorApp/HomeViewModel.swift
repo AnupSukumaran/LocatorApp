@@ -9,6 +9,8 @@ import UIKit
 
 class HomeViewModel {
     
+    var topTitleLabelHandler: ((String) -> Void)?
+    
     
     func checkLatLongVals(latStr: String?, longStr: String?) -> (state: Bool, lat: Double?, long: Double?) {
         guard let latStr = latStr, let longStr = longStr, let latdou = Double(latStr), let longDou = Double(longStr) else {
@@ -17,4 +19,15 @@ class HomeViewModel {
         return (true, latdou, longDou)
     }
 
+}
+
+
+extension HomeViewModel: MapViewControllerDelegate {
+    
+    func someAction() {
+        topTitleLabelHandler?("Enter new latitude & Longitude below")
+//        topTitle.text = "Enter new latitude & Longitude below"
+    }
+
+    
 }
