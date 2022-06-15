@@ -143,14 +143,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fc3-Yu-76J" customClass="MKMapView">
-                                <rect key="frame" x="56" y="255" width="302" height="326"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fc3-Yu-76J" customClass="MKMapView">
+                                <rect key="frame" x="33" y="179" width="348" height="392"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="348" id="Cfc-Be-Gtk"/>
+                                    <constraint firstAttribute="height" constant="392" id="fia-Px-wtR"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JyS-5N-qmW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fc3-Yu-76J" firstAttribute="leading" secondItem="JyS-5N-qmW" secondAttribute="leading" constant="33" id="5Ga-1u-xfN"/>
+                            <constraint firstItem="fc3-Yu-76J" firstAttribute="top" secondItem="JyS-5N-qmW" secondAttribute="top" constant="135" id="Zkm-SB-UPy"/>
+                            <constraint firstItem="JyS-5N-qmW" firstAttribute="trailing" secondItem="fc3-Yu-76J" secondAttribute="trailing" constant="33" id="rtq-WK-Tnx"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="mapView" destination="fc3-Yu-76J" id="h7O-0B-SyP"/>

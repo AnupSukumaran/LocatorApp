@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class HomeViewController: UIViewController {
     
@@ -21,6 +22,8 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        latTextField.text = "51.478558225295565"
+        longTextField.text = "-3.1767163043570044"
         UITextField.connectFields(fields: [latTextField, longTextField])
         KeyBrd().regKBNotific(scrollView, 120)
         // Do any additional setup after loading the view.
@@ -36,6 +39,10 @@ class HomeViewController: UIViewController {
         guard let cntr = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "MapViewController") as? MapViewController else {return}
         navigationItem.backBarButtonItem = UIBarButtonItem(title: title, style: .plain, target: nil, action: nil)
         cntr.navigationItem.setHidesBackButton(true, animated: true)
+        
+        guard let latStr = latTextField.text, let longStr = longTextField.text, let latdou = Double(latStr), let longDou = Double(longStr) else {return}
+        
+        cntr.locationDetails = CLLocationCoordinate2D(latitude: latdou, longitude: longDou)
         navigationController?.pushViewController(cntr, animated: true)
         
     }

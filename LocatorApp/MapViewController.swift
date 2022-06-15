@@ -21,14 +21,15 @@ class MapViewController: UIViewController {
 //        let initialLocation = CLLocation(latitude: 21.282778, longitude: -157.829444)
 //        mapView.centerToLocation(initialLocation)
         
-        let center = CLLocationCoordinate2D(latitude: 21.282778, longitude: -157.829444)
-        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+//        let center = CLLocationCoordinate2D(latitude: 21.282778, longitude: -157.829444)
+        guard let locDetails = locationDetails else {return}
+        let region = MKCoordinateRegion(center: locDetails, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
 
         mapView.setRegion(region, animated: true)
         
         // Drop a pin at user's Current Location
         let myAnnotation: MKPointAnnotation = MKPointAnnotation()
-        myAnnotation.coordinate = CLLocationCoordinate2DMake(21.282778, -157.829444);
+        myAnnotation.coordinate = locDetails //CLLocationCoordinate2DMake(21.282778, -157.829444);
         myAnnotation.title = "Current location"
         mapView.addAnnotation(myAnnotation)
     }
