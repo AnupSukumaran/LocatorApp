@@ -22,7 +22,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HBS-wV-Hw9">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a latitude &amp; longitude below" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9B-dX-ot4">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a latitude &amp; longitude below" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="F9B-dX-ot4">
                                                 <rect key="frame" x="20" y="57" width="374" height="26.5"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                 <nil key="textColor"/>
@@ -148,15 +148,38 @@
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="348" id="Cfc-Be-Gtk"/>
-                                    <constraint firstAttribute="height" constant="392" id="fia-Px-wtR"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6c-Ah-9bc">
+                                <rect key="frame" x="16" y="86" width="382" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RFj-6i-KAX">
+                                <rect key="frame" x="150.5" y="616" width="113" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0JS-Ee-KvY"/>
+                                    <constraint firstAttribute="width" constant="113" id="31V-Wa-eYX"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Back"/>
+                                <connections>
+                                    <action selector="backBtn:" destination="DKN-2Z-hVe" eventType="touchUpInside" id="iQf-up-HFl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JyS-5N-qmW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="fc3-Yu-76J" firstAttribute="leading" secondItem="JyS-5N-qmW" secondAttribute="leading" constant="33" id="5Ga-1u-xfN"/>
+                            <constraint firstItem="JyS-5N-qmW" firstAttribute="trailing" secondItem="K6c-Ah-9bc" secondAttribute="trailing" constant="16" id="77Y-Km-xnL"/>
+                            <constraint firstItem="K6c-Ah-9bc" firstAttribute="leading" secondItem="JyS-5N-qmW" secondAttribute="leading" constant="16" id="Hgh-yw-Liz"/>
+                            <constraint firstItem="RFj-6i-KAX" firstAttribute="top" secondItem="fc3-Yu-76J" secondAttribute="bottom" constant="45" id="K36-Cl-bUc"/>
                             <constraint firstItem="fc3-Yu-76J" firstAttribute="top" secondItem="JyS-5N-qmW" secondAttribute="top" constant="135" id="Zkm-SB-UPy"/>
+                            <constraint firstItem="RFj-6i-KAX" firstAttribute="centerX" secondItem="fc3-Yu-76J" secondAttribute="centerX" id="c6i-kr-oPZ"/>
+                            <constraint firstItem="fc3-Yu-76J" firstAttribute="height" secondItem="FvE-D0-vys" secondAttribute="height" multiplier="0.4375" id="doL-Xk-juH"/>
+                            <constraint firstItem="K6c-Ah-9bc" firstAttribute="top" secondItem="JyS-5N-qmW" secondAttribute="top" constant="42" id="ieD-TN-OL2"/>
                             <constraint firstItem="JyS-5N-qmW" firstAttribute="trailing" secondItem="fc3-Yu-76J" secondAttribute="trailing" constant="33" id="rtq-WK-Tnx"/>
                         </constraints>
                     </view>
@@ -166,7 +189,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xLs-mb-Sjl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1655.072463768116" y="71.651785714285708"/>
+            <point key="canvasLocation" x="1759.4202898550725" y="79.6875"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tyF-iE-kmT">

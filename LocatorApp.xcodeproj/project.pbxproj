@@ -18,6 +18,7 @@
 		C5C16F522859DCBC00E4ECEC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C16F512859DCBC00E4ECEC /* MapViewController.swift */; };
 		C5C16F542859E2FD00E4ECEC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C16F532859E2FD00E4ECEC /* HomeViewController.swift */; };
 		C5C16F562859E40400E4ECEC /* KeyBrd.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C16F552859E40400E4ECEC /* KeyBrd.swift */; };
+		C5C16F582859E92600E4ECEC /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C16F572859E92600E4ECEC /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		C5C16F512859DCBC00E4ECEC /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		C5C16F532859E2FD00E4ECEC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C5C16F552859E40400E4ECEC /* KeyBrd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyBrd.swift; sourceTree = "<group>"; };
+		C5C16F572859E92600E4ECEC /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				C5C16F232859D95B00E4ECEC /* SceneDelegate.swift */,
 				C5C16F552859E40400E4ECEC /* KeyBrd.swift */,
 				C5C16F532859E2FD00E4ECEC /* HomeViewController.swift */,
+				C5C16F572859E92600E4ECEC /* HomeViewModel.swift */,
 				C5C16F512859DCBC00E4ECEC /* MapViewController.swift */,
 				C5C16F272859D95B00E4ECEC /* Main.storyboard */,
 				C5C16F2A2859D96400E4ECEC /* Assets.xcassets */,
@@ -265,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5C16F562859E40400E4ECEC /* KeyBrd.swift in Sources */,
+				C5C16F582859E92600E4ECEC /* HomeViewModel.swift in Sources */,
 				C5C16F542859E2FD00E4ECEC /* HomeViewController.swift in Sources */,
 				C5C16F222859D95B00E4ECEC /* AppDelegate.swift in Sources */,
 				C5C16F242859D95B00E4ECEC /* SceneDelegate.swift in Sources */,

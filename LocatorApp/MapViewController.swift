@@ -17,11 +17,7 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Set initial location in Honolulu
-//        let initialLocation = CLLocation(latitude: 21.282778, longitude: -157.829444)
-//        mapView.centerToLocation(initialLocation)
-        
-//        let center = CLLocationCoordinate2D(latitude: 21.282778, longitude: -157.829444)
+      
         guard let locDetails = locationDetails else {return}
         let region = MKCoordinateRegion(center: locDetails, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
 
@@ -34,40 +30,13 @@ class MapViewController: UIViewController {
         mapView.addAnnotation(myAnnotation)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func backBtn(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
     }
-    */
+    
+
 
 }
 
-//private extension MKMapView {
-//  func centerToLocation(_ location: CLLocation, regionRadius: CLLocationDistance = 1000) {
-//    let coordinateRegion = MKCoordinateRegion(
-//      center: location.coordinate,
-//      latitudinalMeters: regionRadius,
-//      longitudinalMeters: regionRadius)
-//    setRegion(coordinateRegion, animated: true)
-//  }
-//}
-//
-//extension MapViewController: MKMapViewDelegate {
-//  func mapView(
-//    _ mapView: MKMapView,
-//    annotationView view: MKAnnotationView,
-//    calloutAccessoryControlTapped control: UIControl
-//  ) {
-//    guard let artwork = view.annotation as? Artwork else {
-//      return
-//    }
-//
-//    let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
-//    artwork.mapItem?.openInMaps(launchOptions: launchOptions)
-//  }
-//}
+
