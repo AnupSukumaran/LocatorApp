@@ -19,6 +19,8 @@
 		C5C16F542859E2FD00E4ECEC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C16F532859E2FD00E4ECEC /* HomeViewController.swift */; };
 		C5C16F562859E40400E4ECEC /* KeyBrd.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C16F552859E40400E4ECEC /* KeyBrd.swift */; };
 		C5C16F582859E92600E4ECEC /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C16F572859E92600E4ECEC /* HomeViewModel.swift */; };
+		C5C16F5B2859EC0000E4ECEC /* SASCustomAlert in Frameworks */ = {isa = PBXBuildFile; productRef = C5C16F5A2859EC0000E4ECEC /* SASCustomAlert */; };
+		C5C16F5D2859EDF500E4ECEC /* UITextField+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C16F5C2859EDF500E4ECEC /* UITextField+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,7 @@
 		C5C16F532859E2FD00E4ECEC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C5C16F552859E40400E4ECEC /* KeyBrd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyBrd.swift; sourceTree = "<group>"; };
 		C5C16F572859E92600E4ECEC /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		C5C16F5C2859EDF500E4ECEC /* UITextField+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5C16F5B2859EC0000E4ECEC /* SASCustomAlert in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +119,7 @@
 				C5C16F2A2859D96400E4ECEC /* Assets.xcassets */,
 				C5C16F2C2859D96400E4ECEC /* LaunchScreen.storyboard */,
 				C5C16F2F2859D96400E4ECEC /* Info.plist */,
+				C5C16F5C2859EDF500E4ECEC /* UITextField+Ext.swift */,
 			);
 			path = LocatorApp;
 			sourceTree = "<group>";
@@ -152,6 +157,9 @@
 			dependencies = (
 			);
 			name = LocatorApp;
+			packageProductDependencies = (
+				C5C16F5A2859EC0000E4ECEC /* SASCustomAlert */,
+			);
 			productName = LocatorApp;
 			productReference = C5C16F1E2859D95B00E4ECEC /* LocatorApp.app */;
 			productType = "com.apple.product-type.application";
@@ -224,6 +232,9 @@
 				Base,
 			);
 			mainGroup = C5C16F152859D95B00E4ECEC;
+			packageReferences = (
+				C5C16F592859EC0000E4ECEC /* XCRemoteSwiftPackageReference "SASCustomAlert" */,
+			);
 			productRefGroup = C5C16F1F2859D95B00E4ECEC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -270,6 +281,7 @@
 				C5C16F562859E40400E4ECEC /* KeyBrd.swift in Sources */,
 				C5C16F582859E92600E4ECEC /* HomeViewModel.swift in Sources */,
 				C5C16F542859E2FD00E4ECEC /* HomeViewController.swift in Sources */,
+				C5C16F5D2859EDF500E4ECEC /* UITextField+Ext.swift in Sources */,
 				C5C16F222859D95B00E4ECEC /* AppDelegate.swift in Sources */,
 				C5C16F242859D95B00E4ECEC /* SceneDelegate.swift in Sources */,
 				C5C16F522859DCBC00E4ECEC /* MapViewController.swift in Sources */,
@@ -614,6 +626,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C5C16F592859EC0000E4ECEC /* XCRemoteSwiftPackageReference "SASCustomAlert" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AnupSukumaran/SASCustomAlert.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C5C16F5A2859EC0000E4ECEC /* SASCustomAlert */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C5C16F592859EC0000E4ECEC /* XCRemoteSwiftPackageReference "SASCustomAlert" */;
+			productName = SASCustomAlert;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C5C16F162859D95B00E4ECEC /* Project object */;
 }

@@ -8,9 +8,15 @@
 import UIKit
 import MapKit
 
+protocol MapViewControllerDelegate: AnyObject {
+    func someAction()
+}
+
 class MapViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
+    
+    weak var delegate: MapViewControllerDelegate?
     
     var locationDetails: CLLocationCoordinate2D?
 
@@ -22,17 +28,18 @@ class MapViewController: UIViewController {
         let region = MKCoordinateRegion(center: locDetails, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
 
         mapView.setRegion(region, animated: true)
-        
-        // Drop a pin at user's Current Location
+       
         let myAnnotation: MKPointAnnotation = MKPointAnnotation()
-        myAnnotation.coordinate = locDetails //CLLocationCoordinate2DMake(21.282778, -157.829444);
-        myAnnotation.title = "Current location"
+        myAnnotation.coordinate = locDetails
+        myAnnotation.title = "selected location"
         mapView.addAnnotation(myAnnotation)
     }
     
     
     @IBAction func backBtn(_ sender: Any) {
+        delegate?.someAction()
         navigationController?.popViewController(animated: true)
+        
     }
     
 

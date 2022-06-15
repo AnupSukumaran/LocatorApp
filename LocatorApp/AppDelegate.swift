@@ -10,10 +10,12 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        guard let navVC = window?.rootViewController as? UINavigationController else {return true}
+        guard let cntr = navVC.topViewController as? HomeViewController else {return true}
+        cntr.viewModel = HomeViewModel()
         return true
     }
 
