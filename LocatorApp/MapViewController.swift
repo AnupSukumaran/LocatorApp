@@ -15,13 +15,14 @@ protocol MapViewControllerDelegate: AnyObject {
 class MapViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
-    
+    @IBOutlet weak var backbtn: UIButton!
     weak var delegate: MapViewControllerDelegate?
     var locationDetails: CLLocationCoordinate2D?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         mapSetUp()
+        btnSetUp()
     }
     
     @IBAction func backBtn(_ sender: Any) {
@@ -39,5 +40,10 @@ extension MapViewController {
         myAnnotation.coordinate = locDetails
         myAnnotation.title = "selected location"
         mapView.addAnnotation(myAnnotation)
+    }
+    
+    func btnSetUp() {
+        backbtn.layer.borderWidth = 1
+        backbtn.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 1)
     }
 }

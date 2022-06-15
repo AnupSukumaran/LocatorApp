@@ -66,14 +66,16 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uaX-zQ-Kfx">
-                                                <rect key="frame" x="150.5" y="465" width="113" height="48"/>
+                                                <rect key="frame" x="122" y="465" width="170" height="40"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="48" id="Ao1-YA-BjX"/>
-                                                    <constraint firstAttribute="width" constant="113" id="vrw-Ch-d67"/>
+                                                    <constraint firstAttribute="height" constant="40" id="Ao1-YA-BjX"/>
+                                                    <constraint firstAttribute="width" constant="170" id="vrw-Ch-d67"/>
                                                 </constraints>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Submit"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Submit">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                                </buttonConfiguration>
                                                 <connections>
                                                     <action selector="submitBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="awJ-7v-asf"/>
                                                 </connections>
@@ -158,13 +160,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RFj-6i-KAX">
-                                <rect key="frame" x="150.5" y="616" width="113" height="50"/>
+                                <rect key="frame" x="122" y="616" width="170" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="0JS-Ee-KvY"/>
-                                    <constraint firstAttribute="width" constant="113" id="31V-Wa-eYX"/>
+                                    <constraint firstAttribute="height" constant="40" id="0JS-Ee-KvY"/>
+                                    <constraint firstAttribute="width" constant="170" id="31V-Wa-eYX"/>
                                 </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Back"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Back">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="backBtn:" destination="DKN-2Z-hVe" eventType="touchUpInside" id="iQf-up-HFl"/>
                                 </connections>
@@ -185,6 +190,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backbtn" destination="RFj-6i-KAX" id="IOD-Av-wbf"/>
                         <outlet property="mapView" destination="fc3-Yu-76J" id="h7O-0B-SyP"/>
                     </connections>
                 </viewController>

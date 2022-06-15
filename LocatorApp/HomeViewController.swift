@@ -31,6 +31,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         UITextField.connectFields(fields: [latTextField, longTextField])
         KeyBrd().regKBNotific(scrollView, 120)
+        btnSetUp()
     }
     
     @IBAction func tapGesture(_ sender: UITapGestureRecognizer) {
@@ -75,6 +76,11 @@ extension HomeViewController {
         cntr.delegate = viewModel
         cntr.locationDetails = CLLocationCoordinate2D(latitude: latVal, longitude: longVal)
         navigationController?.pushViewController(cntr, animated: true)
+    }
+    
+    func btnSetUp() {
+        submitBtn.layer.borderWidth = 1
+        submitBtn.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 1)
     }
     
 }
