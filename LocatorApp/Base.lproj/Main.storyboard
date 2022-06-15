@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DKN-2Z-hVe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NL5-pl-KhG">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -8,19 +8,19 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LocatorApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="LocatorApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f8h-bz-qaW">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HBS-wV-Hw9">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="852"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a latitude &amp; longitude below" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9B-dX-ot4">
                                                 <rect key="frame" x="20" y="57" width="374" height="26.5"/>
@@ -73,9 +73,13 @@
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Submit"/>
+                                                <connections>
+                                                    <action selector="submitBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="awJ-7v-asf"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstItem="uaX-zQ-Kfx" firstAttribute="centerX" secondItem="aCr-RG-Fl2" secondAttribute="centerX" id="2DO-dT-686"/>
                                             <constraint firstItem="aCr-RG-Fl2" firstAttribute="leading" secondItem="HBS-wV-Hw9" secondAttribute="leading" constant="60" id="51k-Hk-O1A"/>
@@ -86,6 +90,9 @@
                                             <constraint firstItem="F9B-dX-ot4" firstAttribute="leading" secondItem="HBS-wV-Hw9" secondAttribute="leading" constant="20" id="l5Q-Sl-YX1"/>
                                             <constraint firstAttribute="trailing" secondItem="aCr-RG-Fl2" secondAttribute="trailing" constant="60" id="yjh-GP-H7G"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="2Zj-8n-xWX" appends="YES" id="Y3r-T3-pLd"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -107,10 +114,26 @@
                             <constraint firstAttribute="bottom" secondItem="f8h-bz-qaW" secondAttribute="bottom" id="qIL-p5-Gej"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="0zn-oI-bl6"/>
+                    <connections>
+                        <outlet property="latTextField" destination="uSk-8S-Pzu" id="cp1-XV-whU"/>
+                        <outlet property="latTitle" destination="szb-jh-54b" id="MWw-qq-rGt"/>
+                        <outlet property="longTextField" destination="9vs-ru-lO9" id="7Gl-qM-jMX"/>
+                        <outlet property="longTitle" destination="45o-HH-A4R" id="2zo-ya-ulf"/>
+                        <outlet property="mainView" destination="HBS-wV-Hw9" id="8Cb-cq-yvs"/>
+                        <outlet property="scrollView" destination="f8h-bz-qaW" id="2BX-aa-gr5"/>
+                        <outlet property="submitBtn" destination="uaX-zQ-Kfx" id="GWT-ib-Ykr"/>
+                        <outlet property="topTitle" destination="F9B-dX-ot4" id="zpk-y4-tob"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="2Zj-8n-xWX">
+                    <connections>
+                        <action selector="tapGesture:" destination="BYZ-38-t0r" id="Iyy-b0-qeY"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="71.651785714285708"/>
+            <point key="canvasLocation" x="928.98550724637687" y="71.651785714285708"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="gGb-rl-fF4">
@@ -135,7 +158,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xLs-mb-Sjl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="744.92753623188412" y="71.651785714285708"/>
+            <point key="canvasLocation" x="1655.072463768116" y="71.651785714285708"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tyF-iE-kmT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NL5-pl-KhG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="H5X-fM-M1s">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Gqq-Mq-j7f"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TT9-uU-j2P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="71.651785714285708"/>
         </scene>
     </scenes>
     <resources>
